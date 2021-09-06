@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.q{
+    background-color: rgb(91, 214, 214);
+    color:azure;
+    width: 100px;
+}
+</style>
+
+<body>
+    <div id="text"></div>
+
+</body>
+
+</html>
+<!-- 引入核心 -->
+<script src="./js/react.development.js"></script>
+<!-- 引入dom用于react操作dom -->
+<script src="./js//react-dom.development.js"></script>
+<!-- 引入babel用于吧jsx转换成js -->
+<script src="./js/babel.min.js"></script>
+<script type="text/babel">
+    const a = 'react1'
+    const b = 'react2'
+    const VDOM = (
+        <div>
+            <h1 className={b.toUpperCase()}>
+                <span>{b.toUpperCase()}</span>
+            </h1>
+            <h1 id={a.toLowerCase()}>
+                <span style={{color:'pink'}}>{a.toLowerCase()}</span>
+            </h1>
+            <h1 className="q">hello react</h1>
+        </div>
+    )
+    ReactDOM.render(VDOM, document.getElementById('text'))
+</script>
